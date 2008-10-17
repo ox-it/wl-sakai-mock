@@ -345,4 +345,15 @@ public class SiteService implements org.sakaiproject.site.api.SiteService {
 		return false;
 	}
 
+	public Site addSite(String id, String type, String adminRealm)
+			throws IdInvalidException, IdUsedException, PermissionException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public boolean allowAddManagedSite() {
+		// TODO Auto-generated method stub
+		return true;
+	}
+
 }
