@@ -257,4 +257,8 @@ public class UserDirectoryService implements
 		return false;
 	}
 
+	public User getUserByAid(String aid) throws UserNotDefinedException {
+		return null;
+	}
+
 }
