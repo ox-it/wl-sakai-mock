@@ -368,4 +368,10 @@ public class SiteService implements org.sakaiproject.site.api.SiteService {
 		return true;
 	}
 
+	public Site addSite(String id, Site other, String adminRealm)
+			throws IdInvalidException, IdUsedException, PermissionException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
