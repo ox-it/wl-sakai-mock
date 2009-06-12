@@ -374,4 +374,9 @@ public class SiteService implements org.sakaiproject.site.api.SiteService {
 		return null;
 	}
 
+	public String lookupSiteAlias(String siteId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
