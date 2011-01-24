@@ -379,9 +379,4 @@ public class SiteService implements org.sakaiproject.site.api.SiteService {
 		return null;
 	}
 
-	public List<Site> getSoftlyDeletedSites() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 }
