@@ -21,6 +21,7 @@
 package org.sakaiproject.mock.domain;
 
 import java.util.Collection;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
@@ -48,6 +49,9 @@ public class Site extends AuthzGroup implements org.sakaiproject.site.api.Site {
 	boolean pubView;
 	boolean joinable;
 	boolean published;
+	boolean softlyDeleted;
+	
+	Date softlyDeletedDate;
 
 	public Site() {}
 	
@@ -278,6 +282,18 @@ public class Site extends AuthzGroup implements org.sakaiproject.site.api.Site {
 
 	public void setPages(List<Page> pages) {
 		this.pages = pages;
+	}
+
+	public boolean isSoftlyDeleted() {
+		return softlyDeleted;
+	}
+
+	public Date getSoftlyDeletedDate() {
+		return softlyDeletedDate;
+	}
+
+	public void setSoftlyDeleted(boolean flag) {
+		this.softlyDeleted = flag;
 	}
 
 }
