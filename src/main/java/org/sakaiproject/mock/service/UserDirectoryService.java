@@ -261,4 +261,9 @@ public class UserDirectoryService implements
 		return null;
 	}
 
+	public List<User> searchExternalUsers(String criteria, int first, int last) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
