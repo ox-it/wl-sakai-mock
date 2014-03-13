@@ -40,12 +40,7 @@ import org.sakaiproject.exception.IdUnusedException;
 import org.sakaiproject.exception.IdUsedException;
 import org.sakaiproject.exception.PermissionException;
 import org.sakaiproject.javax.PagingPosition;
-import org.sakaiproject.site.api.AllowedJoinableAccount;
-import org.sakaiproject.site.api.Group;
-import org.sakaiproject.site.api.Site;
-import org.sakaiproject.site.api.SiteAdvisor;
-import org.sakaiproject.site.api.SitePage;
-import org.sakaiproject.site.api.ToolConfiguration;
+import org.sakaiproject.site.api.*;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
@@ -110,6 +105,16 @@ public class SiteService implements org.sakaiproject.site.api.SiteService {
 		return true;
 	}
 
+	@Override
+	public void addSiteRemovalAdvisor(SiteRemovalAdvisor siteRemovalAdvisor) {
+
+	}
+
+	@Override
+	public boolean removeSiteRemovalAdvisor(SiteRemovalAdvisor siteRemovalAdvisor) {
+		return false;
+	}
+
 	public int countSites(SelectionType type, Object ofType, String criteria,
 			Map propertyCriteria) {
 		return 0;
@@ -154,6 +159,11 @@ public class SiteService implements org.sakaiproject.site.api.SiteService {
 	}
 
 	public List<SiteAdvisor> getSiteAdvisors() {
+		return null;
+	}
+
+	@Override
+	public String lookupSiteAlias(String siteId) {
 		return null;
 	}
 
@@ -393,7 +403,22 @@ public class SiteService implements org.sakaiproject.site.api.SiteService {
 	{
 		return true;
 	}
-	
+
+	@Override
+	public boolean allowAddManagedSite() {
+		return false;
+	}
+
+	@Override
+	public Site addSite(String id, String type, String adminRealm) throws IdInvalidException, IdUsedException, PermissionException {
+		return null;
+	}
+
+	@Override
+	public Site addSite(String id, Site other, String adminRealm) throws IdInvalidException, IdUsedException, PermissionException {
+		return null;
+	}
+
 	/* (non-Javadoc)
 	 * @see org.sakaiproject.site.api.SiteService#getSiteTypeStrings()
 	 */
