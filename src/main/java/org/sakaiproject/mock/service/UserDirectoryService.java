@@ -92,6 +92,15 @@ public class UserDirectoryService implements
 	public boolean allowUpdateUserName(String id) {
 		return true;
 	}
+	public boolean updateUserId(String id, String newEmail) {
+		org.sakaiproject.mock.domain.User user = users.get(id);
+		if(user != null){
+			user.setEmail(newEmail);
+			user.setEid(newEmail);
+			return true;
+		}
+		return false;
+	}
 
 	public boolean allowUpdateUserPassword(String id) {
 		return true;
